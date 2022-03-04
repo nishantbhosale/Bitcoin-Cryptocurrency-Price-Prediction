@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Pluto - profit in minutes</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='photo/Pluto-logo-modified.png')}}" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Pluto</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <video autoplay loop muted src="{{ url_for('static', filename='photo/bg-video.mp4')}}" style="position: absolute; top: 0;left: 0; width: 100%; opacity: 0.2;"></video>
+            <div class="mh-con container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Get your profit within minutes with Pluto</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Pluto is the best platform where you 
+                            can get information and all required results that you will need
+                             for best investments. Join us and make investing easy.
+                            </p>
+                        <a class="btn btn-primary btn-xl" href="{{ url_for('register') }}">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">We've got what you need!</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-4">This platform not only gives you the latest bitcoin price information,
+                            but it also allows you to predict the value of bitcoin and you can invest according to your preferences.
+                            </p>
+                        <a class="btn btn-light btn-xl" href="{{ url_for('login') }}">Get Started!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">At Your Service</h2>
+                <hr class="divider" />
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-gem fs-1 text-primary bi-pencil-square"></i></div>
+                            <h3 class="h4 mb-2">Register </h3>
+                            <p class="text-muted mb-0">Register and get access to view future of crypto!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Up to Date</h3>
+                            <p class="text-muted mb-0">All prediction done is up to date, done by using recent values.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Access Lifetime</h3>
+                            <p class="text-muted mb-0">Once register you can access our website for lifetime. Unlimited times and make more money out of it.                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-gem bi-graph-up fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Prediction</h3>
+                            <p class="text-muted mb-0">Prediction will assist you to make decision of investing. Prediction will be displayed using graph. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio-->
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{{ url_for('static', filename='photo/portfolio/fullsize/1.jpg')}}" title="Invest in Crypto">
+                            <img class="img-fluid" src="{{ url_for('static', filename='photo/portfolio/thumbnails/1.jpg')}}" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Invest in Crypto</div>
+                                <div class="project-name">Because the cryptocurrency industry is rapidly evolving, why not profit from it by investing in it?</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{{ url_for('static', filename='photo/portfolio/fullsize/2.jpg')}}" title="Background Check">
+                            <img class="img-fluid" src="{{ url_for('static', filename='photo/portfolio/thumbnails/2.jpg')}}" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Background Check</div>
+                                <div class="project-name">Ascertain that you are well-versed in the subject of investments.</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{{ url_for('static', filename='photo/portfolio/fullsize/3.jpg')}}" title="Why Bitcoin">
+                            <img class="img-fluid" src="{{ url_for('static', filename='photo/portfolio/thumbnails/3.jpg')}}" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Why Bitcoin</div>
+                                <div class="project-name">Bitcoin is the most popular cryptocurency and has the largest market capitalization.</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{{ url_for('static', filename='photo/portfolio/fullsize/4.jpg')}}" title="Profit">
+                            <img class="img-fluid" src="{{ url_for('static', filename='photo/portfolio/thumbnails/4.jpg')}}" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Profit</div>
+                                <div class="project-name">The high liquidity associated with bitcoin makes it a great investment vessel if you're looking for profit.</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{{ url_for('static', filename='photo/portfolio/fullsize/5.jpg')}}" title="Safety">
+                            <img class="img-fluid" src="{{ url_for('static', filename='photo/portfolio/thumbnails/5.jpg')}}" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Safety</div>
+                                <div class="project-name">The money you put into Bitcoin is not safe from value fluctuations.</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{{ url_for('static', filename='photo/portfolio/fullsize/6.jpg')}}" title="Buy">
+                            <img class="img-fluid" src="{{ url_for('static', filename='photo/portfolio/thumbnails/6.jpg')}}" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Buying</div>
+                                <div class="project-name">Just like there is no minimum limit of investing in stocks, there is no defined minimum amount to buy Bitcoin.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call to action-->
+        <section class="page-section bg-dark text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">Get your helping hand for FREE !</h2>
+                <a class="btn btn-light btn-xl" href="">Login now</a>
+            </div>
+        </section>
+        <section>
+            
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy;  Pluto - profit in minutes</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
