@@ -19,7 +19,7 @@
 </head>
 <body>
    <!-- Navigation-->
-   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" style="background-color: #f4623a;" id="mainNav">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="{{ url_for('index') }}#page-top">Pluto</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -87,6 +87,18 @@
                         <label for="phone">Phone number</label>
                         <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                     </div>
+                    <!-- Password -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="phone" type="password" placeholder="Enter Your Password Here" data-sb-validations="required" />
+                        <label for="phone">Password</label>
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">Password is required.</div>
+                    </div>
+                    <!-- Re-eneter Password -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="phone" type="password" placeholder="Re-enter Your Password" data-sb-validations="required" />
+                        <label for="phone">Re-enter Password</label>
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">Re-entering Password is mandatory.</div>
+                    </div>
                     <!-- Message input-->
                     <!--
                     <div class="form-floating mb-3">
@@ -113,7 +125,7 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                    <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" style="z-index: 1;" type="submit">Submit</button></div>
                 </form>
             </div>
         </div>
