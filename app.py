@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for
 app = Flask("Cryptocurrency")
+login_dict = {"nishant@gmail.com":"12345"}
 
 @app.route("/")
 def index():
@@ -7,6 +8,10 @@ def index():
 
 @app.route("/login")
 def login():
+    r_email = request.args.get("email_r")
+    r_password = request.args.get("password_r")
+    new_dict = {r_email:r_password}
+    login_dict.update(new_dict)
     return render_template("login.html")
 
 @app.route("/register")
