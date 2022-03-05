@@ -65,7 +65,7 @@ def register():
 
 @app.route("/prediction",methods=["GET","POST"])
 def prediction():
-    return("We'll Inster the prediction page here shortly!")
+    return("Thanks for patience...We'll update the prediction page here shortly!!!")
 
 @app.route('/logout')
 def logout():
