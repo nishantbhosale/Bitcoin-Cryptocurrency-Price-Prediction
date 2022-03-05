@@ -56,6 +56,7 @@ def register():
             print("Record Added  Successfully")
             flash("Record Added  Successfully","success")
         except:
+            print("Error in Insert Operation","danger")
             flash("Error in Insert Operation","danger")
         finally:
             return redirect(url_for("login"))
