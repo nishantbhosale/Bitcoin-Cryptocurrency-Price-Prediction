@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask("Cryptocurrency")
 app.secret_key="123"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 print(db)
 con=sqlite3.connect("data.db")
@@ -66,7 +66,7 @@ def register():
 
 @app.route("/prediction",methods=["GET","POST"])
 def prediction():
-    return("Thanks for patience...We'll update the prediction page here shortly!.......-Team Pluto.")
+    return render_template("prediction.html")
 
 @app.route('/logout')
 def logout():
