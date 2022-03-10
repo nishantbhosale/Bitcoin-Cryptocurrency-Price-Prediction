@@ -32,15 +32,18 @@ def login():
         if data:
             session["email"]=data["email"]
             session["password"]=data["password"]
-            #return redirect(url_for("prediction"))
-            return render_template("prediction.html")
+            return redirect("/prediction")
+            #return render_template("prediction.html")
         else:
-            if request.method=='GET':
-                return render_template("MisMatch.html")
+            return redirect("/MisMatch")
             #return("Username and Password Mismatch")
             #flash("Username and Password Mismatch","danger")
     #return redirect(url_for("login"))
     return render_template("login.html")
+
+@app.route("/MisMatch")
+def MisMatch():
+    return render_template("MisMatch.html")
 
 @app.route("/register",methods=["GET","POST"])
 def register():
@@ -80,7 +83,7 @@ def news():
 @app.route('/logout')
 def logout():
     session.clear()
-    return redirect(url_for("index"))
+    return redirect(url_for("login"))
 
 
 if __name__ == '__main__' :
