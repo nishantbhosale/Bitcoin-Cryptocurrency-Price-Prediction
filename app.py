@@ -9,7 +9,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 print(db)
 con=sqlite3.connect("data.db")
-con.execute("create table if not exists person(id integer primary key,name text,email text,password text)")
+con.execute("create table if not exists person(id integer primary key,name text,email text NOT NULL UNIQUE,password text)")
 con.close()
 print(con)
 
