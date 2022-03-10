@@ -1,5 +1,5 @@
 from flask import Flask, render_template,request,flash,redirect,url_for,session
-import sqlite3
+import sqlite3, http.client
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -69,10 +69,13 @@ def register():
 
 @app.route("/prediction",methods=["GET","POST"])
 def prediction():
-    if request.method=='POST':
+    if request.method=='POST' or request.method=='GET':
         #return("It's working bro")
         return render_template("prediction.html")
 
+@app.route("/news")
+def news():
+    return render_template("news.html")
 
 @app.route('/logout')
 def logout():
