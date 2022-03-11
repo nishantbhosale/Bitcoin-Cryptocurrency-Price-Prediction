@@ -11474,3 +11474,24 @@ header.masthead h1, header.masthead .h1 {
   
 }
 
+.predict_table{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Predict_price{
+  background-color: #FF9F45 ;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-top: 30px;
+  margin-top: 20px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.fig_name{
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+}

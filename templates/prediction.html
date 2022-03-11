@@ -40,26 +40,40 @@
     <p style="text-align: center;">
         <img src="{{ url_for('static', filename='photo/prediction.png')}}" alt="Prediction Image!" >
     </p>
-    <center style="font-family: 'Roboto Slab', serif; size: 20px;">Prediction graph</center>
-    
-    <p>Today's Predicted Price: {{predicted_price}}</p>
+    <center class="fig_name">Prediction graph</center>
+
+    <!-- Predicted Price -->
+    <div class="Predict_price">
+        <h5>Today's Predicted Price:&nbsp;&nbsp;</h5>
+        <br><br>
+        <p>{{predicted_price}}</p>
+    </div>
+
 
     <div>
         <!-- CSV file display -->
         <br><br><br><br>
-                <h2>Monthly Prediction Table</h2>
-                <h6>(price in USD)</h6>
-                <table>
-                    <h1>
-                        {%for table in tables%}
-                        <h2>{{titles[loop.index]}}</h2>
-                        {{table|safe}}
-                        {%endfor%}
-                    </h1>
-                </table>
+                <div style="text-align: center;">
+                    <h2>Monthly Prediction Table</h2>
+                    <h6>(price in USD)</h6>
+                </div>
+        <br>
+        <div class="predict_table">
+            <table>
+                <h1>
+                    {%for table in tables%}
+                    <h2>{{titles[loop.index]}}</h2>
+                    {{table|safe}}
+                    {%endfor%}
+                </h1>
+            </table></p>
+        </div>
     </div>
     
 
-    
+       <!-- Footer-->
+   <footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy;  Pluto - profit in minutes</div></div>
+    </footer>
 </body>
 </html>
