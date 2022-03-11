@@ -1,5 +1,5 @@
 from flask import Flask, render_template,request,flash,redirect,url_for,session
-import sqlite3
+import sqlite3, requests
 import pandas as pd
 from flask_sqlalchemy import SQLAlchemy
 
@@ -74,12 +74,15 @@ def register():
 @app.route("/prediction",methods=["GET","POST"])
 def prediction():
     if request.method=='POST' or request.method=='GET':
+        response = requests.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+        data = response.json()
+        abb=(data["bpi"]["USD"]["rate"])
         #return("It's working bro")
-       # return render_template("prediction.html")
-       df=pd.read_csv('file1.csv')
-       df.to_csv('file1.csv', index=None)
-       data=pd.read_csv('file1.csv')
-       return render_template('prediction.html', tables=[data.to_html()],titles=[''], predicted_price=39283.32886156082)
+        # # return render_template("prediction.html")
+        df=pd.read_csv('file1.csv')
+        df.to_csv('file1.csv', index=None)
+        data=pd.read_csv('file1.csv')
+        return render_template('prediction.html', tables=[data.to_html()],titles=[''], predicted_price=39283.32886156082, live_price=abb)
 
 @app.route("/tweets")
 def tweets():
