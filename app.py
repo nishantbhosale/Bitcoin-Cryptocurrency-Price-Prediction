@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask("Cryptocurrency")
 app.secret_key="123"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/data.db'
 db = SQLAlchemy(app)
 print(db)
 con=sqlite3.connect("data.db")
