@@ -37,11 +37,16 @@
     <br>
     <br><br><br>
     <!-- Prediction graph -->
-    <img class="img_center" src="{{ url_for('static', filename='photo/prediction.png')}}" alt="Prediction Image!" >
+    <p style="text-align: center;">
+        <img src="{{ url_for('static', filename='photo/prediction.png')}}" alt="Prediction Image!" >
+    </p>
+    <center style="font-family: 'Roboto Slab', serif; size: 20px;">Prediction graph</center>
+    
     <p>Today's Predicted Price: {{predicted_price}}</p>
     <p>Live Price: {{live_price}}</p>
 
     <div>
+        <!-- CSV file display -->
         <br><br><br><br>
                 <h2>Monthly Prediction Table</h2>
                 <h6>(price in USD)</h6>
@@ -55,35 +60,6 @@
                 </table>
     </div>
     
-    <!--  <div class="row">
-        <div class="col-md-6">
-            <div class="leftside">
-                
-                 CSV file display in html
-                <br><br><br><br>
-                <h2>Monthly Prediction Table</h2>
-                <h6>(price in USD)</h6>
-                <table>
-                    <h1>
-                        {%for table in tables%}
-                        <h2>{{titles[loop.index]}}</h2>
-                        {{table|safe}}
-                        {%endfor%}
-                    </h1>
-                </table>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="rightside">
-                <br>
-                <br>
-                <br><br><br>
-                 Prediction graph 
-                <img src="{{ url_for('static', filename='photo/prediction.png')}}" alt="Prediction Image!" width="100%">
-            </div>
-        </div>
-    </div>-->
-
 
     
 </body>
