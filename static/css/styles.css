@@ -11482,7 +11482,7 @@ header.masthead h1, header.masthead .h1 {
 
 .Predict_price{
   background-color: #FF9F45 ;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
