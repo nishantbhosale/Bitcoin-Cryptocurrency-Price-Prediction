@@ -1,5 +1,6 @@
 from flask import Flask, render_template,request,flash,redirect,url_for,session
-import sqlite3, http.client
+import sqlite3
+import pandas as pd
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -74,7 +75,14 @@ def register():
 def prediction():
     if request.method=='POST' or request.method=='GET':
         #return("It's working bro")
-        return render_template("prediction.html")
+       # return render_template("prediction.html")
+       df=pd.read_csv('file1.csv')
+       df.to_csv('file1.csv', index=None)
+       data=pd.read_csv('file1.csv')
+       return render_template('prediction.html', tables=[data.to_html()],titles=[''])
+@app.route("/tweets")
+def tweets():
+    return render_template("tweets.html")
 
 @app.route("/news")
 def news():
@@ -84,6 +92,7 @@ def news():
 def logout():
     session.clear()
     return redirect(url_for("login"))
+
 
 
 if __name__ == '__main__' :

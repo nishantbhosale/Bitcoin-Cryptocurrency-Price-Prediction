@@ -25,64 +25,20 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('tweets') }}">Tweets</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('prediction') }}">Prediction</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('news') }}">News</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
             </ul>
         </div>
     </div>
     </nav>
-
-    <br>
-    <br>
-    <br><br><br>
-    <!-- Prediction graph -->
-    <img class="img_center" src="{{ url_for('static', filename='photo/prediction.png')}}" alt="Prediction Image!" >
-
-    <div>
-        <br><br><br><br>
-                <h2>Monthly Prediction Table</h2>
-                <h6>(price in USD)</h6>
-                <table>
-                    <h1>
-                        {%for table in tables%}
-                        <h2>{{titles[loop.index]}}</h2>
-                        {{table|safe}}
-                        {%endfor%}
-                    </h1>
-                </table>
-    </div>
-    
-    <!--  <div class="row">
-        <div class="col-md-6">
-            <div class="leftside">
-                
-                 CSV file display in html
-                <br><br><br><br>
-                <h2>Monthly Prediction Table</h2>
-                <h6>(price in USD)</h6>
-                <table>
-                    <h1>
-                        {%for table in tables%}
-                        <h2>{{titles[loop.index]}}</h2>
-                        {{table|safe}}
-                        {%endfor%}
-                    </h1>
-                </table>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="rightside">
-                <br>
-                <br>
-                <br><br><br>
-                 Prediction graph 
-                <img src="{{ url_for('static', filename='photo/prediction.png')}}" alt="Prediction Image!" width="100%">
-            </div>
-        </div>
-    </div>-->
-
-
-    
+    <!-- tweets -->
+    <br><br><br><br>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-e88ff4a0-e9cd-43fa-9b0c-fedc7479e884"></div>
+      <!-- Footer-->
+   <footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy;  Pluto - profit in minutes</div></div>
+</footer>
 </body>
 </html>

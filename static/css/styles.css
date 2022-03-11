@@ -11474,3 +11474,10 @@ header.masthead h1, header.masthead .h1 {
   
 }
 
+.img_center{
+  display: block;
+  margin-left: auto;
+  margin-top: auto;
+  width: 50%;
+  text-align: center;
+}
