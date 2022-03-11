@@ -79,7 +79,7 @@ def prediction():
        df=pd.read_csv('file1.csv')
        df.to_csv('file1.csv', index=None)
        data=pd.read_csv('file1.csv')
-       return render_template('prediction.html', tables=[data.to_html()],titles=[''])
+       return render_template('prediction.html', tables=[data.to_html()],titles=[''], predicted_price=39283.32886156082)
 @app.route("/tweets")
 def tweets():
     return render_template("tweets.html")
