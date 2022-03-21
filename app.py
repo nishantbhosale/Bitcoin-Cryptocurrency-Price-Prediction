@@ -7,6 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask("Cryptocurrency")
 app.secret_key="123"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/data.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 print(db)
 con=sqlite3.connect("data.db")
@@ -82,7 +83,7 @@ def prediction():
         df=pd.read_csv('file1.csv')
         df.to_csv('file1.csv', index=None)
         data=pd.read_csv('file1.csv')
-        return render_template('prediction.html', tables=[data.to_html()],titles=[''], predicted_price=38967.231863, live_price=abb)
+        return render_template('prediction.html', tables=[data.to_html()],titles=[''], predicted_price=38967.231863, live_price=abb, positive_tweet="27.8873% Positive Tweets")
 
 @app.route("/tweets")
 def tweets():
