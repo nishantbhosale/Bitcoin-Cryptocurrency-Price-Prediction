@@ -1,5 +1,5 @@
 from flask import Flask, render_template,request,flash,redirect,url_for,session
-import sqlite3, requests
+import sqlite3, requests, csv
 import pandas as pd
 from flask_sqlalchemy import SQLAlchemy
 
@@ -83,7 +83,21 @@ def prediction():
         df=pd.read_csv('file1.csv')
         df.to_csv('file1.csv', index=None)
         data=pd.read_csv('file1.csv')
-        return render_template('prediction.html', tables=[data.to_html()],titles=[''], predicted_price=38967.231863, live_price=abb, positive_tweet="27.8873% Positive Tweets")
+        rows=[]
+        file = open("predictedprice.csv")
+        csvreader = csv.reader(file)
+        for row in csvreader:
+            rows.append(row)
+        p_p=(rows[0][0])
+        file.close()
+        rowws=[]
+        filep = open("positivetweets.csv")
+        csvreader = csv.reader(filep)
+        for row in csvreader:
+            rowws.append(row)
+        p_t=(rowws[0][0])
+        filep.close()
+        return render_template('prediction.html', tables=[data.to_html()],titles=[''], predicted_price=p_p, live_price=abb, positive_tweet=f"{p_t} positive tweets.")
 
 @app.route("/tweets")
 def tweets():
